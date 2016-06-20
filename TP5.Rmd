@@ -1,0 +1,28 @@
+---
+title: "Análise Exploratória TP5"
+author: "Augusto Cesar Ribeiro Nunes - 13/0103004"
+date: "June 20, 2016"
+output: pdf_document
+---
+
+```{r dados}
+dados <- read.("mistura.txt", header=FALSE)
+dados <- unlist(dados)
+require(ggplot2)
+
+p1 <- qplot(dados, bins=1000)
+p2 <- qplot(dados, geom="density")
+
+grid.arrange(p1,p2)
+```
+
+```{r}
+passo.E <- function(dados, mu1, sigma1, mu2, sigma2, p){
+  for(i in 1:length(dados)){
+    gamma_i <- (p*dnorm(dados[i], mean = mu2, sd = sigma2^2))/((1-p)*dnorm(dados[i], mean = mu1, sd = sigma1^2) + p*dnorm(dados[i], mean = mu2, sd = sigma2^2))
+  }
+}
+```
+
+
+
