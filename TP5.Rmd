@@ -6,14 +6,23 @@ output: pdf_document
 ---
 
 ```{r dados}
-dados <- read.("mistura.txt", header=FALSE)
+dados <- read.csv("mistura.txt", header=FALSE)
 dados <- unlist(dados)
 require(ggplot2)
 
 p1 <- qplot(dados, bins=1000)
 p2 <- qplot(dados, geom="density")
 
+par(mfrow=c(2,1))
+hist(dados, main = "Histograma dos dados", ylab="Frequência")
+plot(density(dados), main = "Densidade Kernel dos Dados", ylab="Densidade")
+
+require(gridExtra)
 grid.arrange(p1,p2)
+
+
+require(moments)
+skewness(dados)
 ```
 
 ```{r}
