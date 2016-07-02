@@ -26,11 +26,40 @@ skewness(dados)
 ```
 
 ```{r}
-passo.E <- function(dados, mu1, sigma1, mu2, sigma2, p){
-  for(i in 1:length(dados)){
-    gamma_i <- (p*dnorm(dados[i], mean = mu2, sd = sigma2^2))/((1-p)*dnorm(dados[i], mean = mu1, sd = sigma1^2) + p*dnorm(dados[i], mean = mu2, sd = sigma2^2))
-  }
+conjunto1 <- c(0.5,-0.7261, 29.9, 0, 1)
+conjunto2 <- c(0.5,0,  100,sd(dados), sd(dados))
+conjunto3 <- c(0.5, -100, 100, 1, 1)
+
+# conjunto <- rbind(conjunto1, conjunto2, conjunto3)
+
+em <- function(dados, conjunto){
+  passo.e <- conjunto[1]*dnorm(dados, conjunto[2], sqrt(conjunto[4]))/(conjunto[1]*dnorm(dados, conjunto[2], sqrt(conjunto[4])) + 
+                                                                         (1-conjunto[1])*dnorm(dados, conjunto[3], sqrt(conjunto[5])))
+  conjunto[1] <- mean(passo.e)
+  conjunto[2] <- sum(passo.e*dados)/ sum(passo.e)
+  conjunto[3] <- sum((1-passo.e)*dados)/sum(1-passo.e)
+  conjunto[4] <- sum(passo.e*(dados - conjunto[2])^2)/sum(passo.e)
+  conjunto[5] <- sum((1 - passo.e)*(dados - conjunto[3])^2)/sum(1 - passo.e)
+  conjunto
 }
+
+
+iteracao <- function(dados, conjunto){
+  conjunto.inicial <- em(dados, conjunto)
+    for(i in 1:5){
+      if(abs(conjunto[i] - conjunto.inicial[i]) > 1e-04){
+        conjunto = conjunto.inicial
+        iteracao(dados,conjunto)
+      }
+      else conjunto.inicial
+    }
+  conjunto.inicial
+}
+
+
+iteracao(dados,conjunto1)
+
+
 ```
 
 
