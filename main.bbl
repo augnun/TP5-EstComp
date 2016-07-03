@@ -1,0 +1,65 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.5 }
+
+\bibitem[Aldrich et al. 1997]{aldrich1997ra}
+\abntrefinfo{Aldrich et al.}{ALDRICH et al.}{1997}
+{ALDRICH, J. et al. Ra fisher and the making of maximum likelihood 1912-1922.
+\emph{Statistical Science}, Institute of Mathematical Statistics, v.~12, n.~3,
+  p. 162--176, 1997.}
+
+\bibitem[Arcidiacono e Jones 2003]{arcidiacono2003finite}
+\abntrefinfo{Arcidiacono e Jones}{ARCIDIACONO; JONES}{2003}
+{ARCIDIACONO, P.; JONES, J.~B. Finite mixture distributions, sequential
+  likelihood and the em algorithm.
+\emph{Econometrica}, Wiley Online Library, v.~71, n.~3, p. 933--946, 2003.}
+
+\bibitem[Birnbaum 1962]{birnbaum1962foundations}
+\abntrefinfo{Birnbaum}{BIRNBAUM}{1962}
+{BIRNBAUM, A. On the foundations of statistical inference.
+\emph{Journal of the American Statistical Association}, Taylor \& Francis,
+  v.~57, n.~298, p. 269--306, 1962.}
+
+\bibitem[Dempster, Laird e Rubin 1977]{dempster1977maximum}
+\abntrefinfo{Dempster, Laird e Rubin}{DEMPSTER; LAIRD; RUBIN}{1977}
+{DEMPSTER, A.~P.; LAIRD, N.~M.; RUBIN, D.~B. Maximum likelihood from incomplete
+  data via the em algorithm.
+\emph{Journal of the royal statistical society. Series B (methodological)},
+  JSTOR, p. 1--38, 1977.}
+
+\bibitem[Fisher 1925]{fisher1925statistical}
+\abntrefinfo{Fisher}{FISHER}{1925}
+{FISHER, R.~A. \emph{Statistical methods for research workers}. [S.l.]: Genesis
+  Publishing Pvt Ltd, 1925.}
+
+\bibitem[Fisher et al. 1912]{fisher1912absolute}
+\abntrefinfo{Fisher et al.}{FISHER et al.}{1912}
+{FISHER, R.~A. et al. On an absolute criterion for fitting frequency curves.
+1912.}
+
+\bibitem[Hacking 1965]{hacking1965logic}
+\abntrefinfo{Hacking}{HACKING}{1965}
+{HACKING, I. \emph{Logic of statistical inference}. [S.l.]: CUP Archive, 1965.}
+
+\bibitem[Martin-L{\"o}f 1974]{martin1974notion}
+\abntrefinfo{Martin-L{\"o}f}{MARTIN-L{\"O}F}{1974}
+{MARTIN-L{\"O}F, P. The notion of redundancy and its use as a quantitative
+  measure of the discrepancy between a statistical hypothesis and a set of
+  observational data [with discussion].
+\emph{Scandinavian Journal of Statistics}, JSTOR, p. 3--18, 1974.}
+
+\bibitem[Sundberg 1974]{sundberg1974maximum}
+\abntrefinfo{Sundberg}{SUNDBERG}{1974}
+{SUNDBERG, R. Maximum likelihood theory for incomplete data from an exponential
+  family.
+\emph{Scandinavian Journal of Statistics}, JSTOR, p. 49--58, 1974.}
+
+\bibitem[Wu 1983]{wu1983convergence}
+\abntrefinfo{Wu}{WU}{1983}
+{WU, C.~J. On the convergence properties of the em algorithm.
+\emph{The Annals of statistics}, JSTOR, p. 95--103, 1983.}
+
+\end{thebibliography}
